@@ -5,36 +5,28 @@
 
 ## Table of contents[![](./docs/img/pin.svg)](#table-of-contents)
 
-1. [Aciklama](#aciklama)
-2. [Not](#not)
-3. [Usage](#usage)
+1. [Description](#Description)
+2. [Usage](#usage)
 
 ---
 
-#### Aciklama: [![](./docs/img/pin.svg)](#aciklama)
+#### Description: (#Description)
 
-Developer projesinin sadece belirli bir branch'ini derlemek icin yardimci bir script istemektedir. Bu script'i asagidaki ozellikleri saglayacak sekilde bash script ile kodlayiniz. 
+This script with multiple functions that change branch, create a new branch, compress the artifact file and choose to debug mode aims to build a Maven project. If the script is started without any parameter, the script will run on default parameters. The Example output screen is below:  
 
-1. Kullanici build istedigi branch ismini vermeli ve o anda o branch uzerinde degilse o branch'e gecmeli ve o sekilde build islemi baslamalidir.
-2. Kullanici main ve ya master branch'ini derlemek istediginde ekrana bu bir uyari (WARNING) cikmali, `su an master ve ya main branch'ini build ediyorsunuz !!!` diye.
-3. Kullanici bu script yardimiyla yeni bir branch olusturabilmeli ayni zamanda.
-3. Build islemi sirasinda DEBUG modunun acik olup olmayacagi kullanicidan alinmali. Eger kullanici belirtmeyi tercih etmiyorsa default olarak DEBUG mod kapali gelmeli.
-4. Kullanici build islemi bittikten sonra cikan artifact'lerin hangi formatta compress edilecegini secebilmeli, kullaniciya iki secenek sunulmali `zip` ve ya `tar.gz ` . Bu iki compress formatindan baska bir format verilmisse build islemi baslamamali, script kirilmalidir. (Not: artifact ismi branch_name.tar.gz ve branch_name.zip formatinda olmali, yani o an uzerinde calisilan branch'in ismi o compress edilen dosyanin ismi olmalidir.)
-5. Compress edilen artifact'lerin hangi dizine tasinacagi kullanicidan alinmalidir.
+![Alt text](./docs/img/script1.png)
 
+Parameters and default values are as follows:
 
+    -b : This parameter is used to change the current branch and it makes to build on the changed branch. 
+    -n : This parameter creates new branch.
+    -f : This parameter selects to compress format. Default is tar. This parameter can take "tar" and "zip" values.If an invalid parameter is set, the script will exit
+    -p : This parameter is used to change of compressed file path. Default path is the current path. 
+    -d : This parameter determines to debug mode. This parameter can take "enable" and "disable" values.
 
+There is a screen shot below that includes all parameters: 
 
-`Kullanici`: Bu build scriptini kullanan yazilimci, developer, gelistirici.
-
----
-
-#### Not: [![](./docs/img/pin.svg)](#not)
-
-- Burada verilen proje `Java Spring Boot` ile yazilmistir ve `Maven` paket yoneticisi ile yonetilmektedir. Build scriptini bunu dikkate alarak yaziniz.
-- Burada verilen projeden farkli bir projede kullanilabilir. Ornegin bir `NodeJS` uygulamasi ve paket yonetimi icin `npm` kullanabilirsiniz. 
-
----
+![Alt text](./docs/img/script2.png)
 
 
 #### Example Usage: [![](./docs/img/pin.svg)](#usage)

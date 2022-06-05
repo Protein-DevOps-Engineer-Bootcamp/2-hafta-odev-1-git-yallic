@@ -14,7 +14,7 @@
 
 This script with multiple functions that change branch, create a new branch, compress the artifact file and choose to debug mode aims to build a Maven project. If the script is started without any parameter, the script will run on default parameters. The Example output screen is below:  
 
-![Alt text](./docs/img/script1.png)
+![Alt text](./docs/script1.png)
 
 Parameters and default values are as follows:
 
@@ -26,7 +26,7 @@ Parameters and default values are as follows:
 
 There is a screen shot below that includes all parameters: 
 
-![Alt text](./docs/img/script2.png)
+![Alt text](./docs/script2.png)
 
 
 #### Example Usage: [![](./docs/img/pin.svg)](#usage)
